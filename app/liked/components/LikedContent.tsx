@@ -1,5 +1,7 @@
 "use client"
 
+import LikeButton from "@/components/LikeButton";
+import MediaItem from "@/components/MediaItem";
 import { useUser } from "@/hooks/useUser";
 import { Song } from "@/types"
 import { useRouter } from "next/navigation";
@@ -39,9 +41,16 @@ No Liked Songs
        {songs.map((song)=>(
         <div
         key={song.id}
+        className="flex items-center gap-x-4 w-full"
         >
+           <div className="flex-1">
+            <MediaItem 
+            onClick={()=>{}}
+            data={song}
+            />
 
-            
+           </div>
+            <LikeButton songId={song.id} />
             </div>
        ))}
         

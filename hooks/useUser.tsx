@@ -79,6 +79,8 @@ export const MyUserContextProvider = (props: Props) =>{
         subscription
     };
 
+    // @ts-ignore
+
     return <UserContext.Provider value={value} {...props} />
 }
 
